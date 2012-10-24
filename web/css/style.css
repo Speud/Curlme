@@ -1,0 +1,82 @@
+body .navbar .brand {
+    color: #000000;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 30px rgba(255, 255, 255, 0.125);
+    transition: all 0.2s linear 0s;
+	font-size: 30px;
+	line-height: 15px;
+	font-weight: bold;
+}
+
+body .navbar .brand:hover {
+	color: #999;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1), 0 0 30px rgba(0, 0, 0, 0.4);
+}
+
+body .navbar h2 {
+	font-size: 16px;
+	text-align: right;
+}
+
+body a {
+	color: #007777;
+}
+
+#content {
+	margin-top: 80px;
+}
+
+#lien {
+  margin-bottom: 2em;
+  padding-bottom: 2em;
+  border-bottom: 1px solid #eee;
+}
+
+#lien img {
+	margin-left: 0;
+}
+
+.delete {
+  float: right;
+}
+body h3 {
+  margin: 0;
+}
+#curlme {
+  vertical-align: top;
+  padding: 6px 10px;
+}
+
+div.img {
+	margin-left: 0;
+}
+
+#add {
+	margin-left: 0;
+	margin-top: 20px;
+	float: left;
+	clear: both;
+}
+
+#previous {
+	
+}
+#next {
+	float: right;
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {  }
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) { 
+p.description {
+	margin-left: 0;
+}
+
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {  }
+
+/* Landscape phones and down */
+@media (max-width: 480px) {  }

@@ -1,2 +1,5 @@
-<p class="text-success">Le lien a été supprimé avec succès</p>
-<p><a href="<?php echo site_url(); ?>" title="Retour vers la liste des liens">Retour vers la liste des liens</a></p>
+<div class="alert alert-success">
+	<h4>Well done!</h4>
+	<p>The link has been deleted</p>
+	<p><a href="<?php echo site_url(); ?>" title="Go to home page">Back to home</a></p>
+</div>

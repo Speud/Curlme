@@ -1,82 +1,23 @@
-body .navbar .brand {
-    color: #000000;
-    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 30px rgba(255, 255, 255, 0.125);
-    transition: all 0.2s linear 0s;
-	font-size: 30px;
-	line-height: 15px;
-	font-weight: bold;
-}
-
-body .navbar .brand:hover {
-	color: #999;
-    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1), 0 0 30px rgba(0, 0, 0, 0.4);
-}
-
-body .navbar h2 {
-	font-size: 16px;
-	text-align: right;
-}
-
-body a {
-	color: #007777;
-}
-
-#content {
-	margin-top: 80px;
-}
-
-#lien {
-  margin-bottom: 2em;
-  padding-bottom: 2em;
-  border-bottom: 1px solid #eee;
-}
-
-#lien img {
-	margin-left: 0;
-}
-
-.delete {
-  float: right;
-}
-body h3 {
-  margin: 0;
-}
-#curlme {
-  vertical-align: top;
-  padding: 6px 10px;
-}
-
-div.img {
-	margin-left: 0;
-}
-
-#add {
-	margin-left: 0;
-	margin-top: 20px;
-	float: left;
-	clear: both;
-}
-
-#previous {
-	
-}
-#next {
-	float: right;
-}
-
-/* Large desktop */
-@media (min-width: 1200px) {  }
-
-/* Portrait tablet to landscape and desktop */
-@media (min-width: 768px) and (max-width: 979px) { 
-p.description {
-	margin-left: 0;
-}
-
-}
-
-/* Landscape phone to portrait tablet */
-@media (max-width: 767px) {  }
-
-/* Landscape phones and down */
-@media (max-width: 480px) {  }
+html,body{height:100%;}
+body a.top_link{position:fixed;right:20px;bottom:20px;display:none;opacity:0.7;z-index:2000;border-bottom:none;height:30px;width:30px;}
+#header{background-image:url('../img/office.png');background-repeat:repeat;}
+body .navbar h1 .brand{font-size:30px;line-height:15px;font-weight:900;color:#000;text-shadow:1px 1px 1px rgba(39, 150, 28, 0.8),0 0 20px rgba(255, 255, 255, 0.125);transition:all 0.2s linear 0s;-moz-transition:all 0.2s linear 0s;-webkit-transition:all 0.2s linear 0s;}
+body .navbar .brand:hover{color:#999;text-shadow:0 1px 1px rgba(0, 0, 0, 0.8),0 0 30px rgba(0, 0, 0, 0.4);}
+#footer{background-image:url('../img/office.png');background-repeat:repeat;border-top:1px solid #000;position:relative;margin-top:-56px;height:40px;clear:both;padding:5px 0;}
+#footer a{text-shadow:0 1px 0 rgba(255, 255, 255, 0.1),0 0 30px rgba(255, 255, 255, 0.125);transition:all 0.2s linear 0s;-moz-transition:all 0.2s linear 0s;-webkit-transition:all 0.2s linear 0s;font-size:16px;line-height:40px;font-weight:300;color:#444;text-align:center;}
+#footer a:hover{color:#999;text-shadow:0 1px 0 rgba(0, 0, 0, 0.1),0 0 30px rgba(0, 0, 0, 0.4);text-decoration:none;}
+#wrap{min-height:100%;height:auto !important;height:40%;margin:0 auto -40px;}
+#push{height:40px;}
+.textIndent{display:none;}
+.imgThumb{height:auto;width:100px;}
+#lien{margin-bottom:2em;padding-bottom:2em;border-bottom:1px solid #ccc;border-top:1px solid #eee;background-image:-moz-linear-gradient(top, rgba(255, 255, 255, 0.3), #efefe3);background-image:-webkit-gradient(linear, 0 0, 0 100%, from(rgba(255, 255, 255, 0.3)), to(#efefe3));background-image:-webkit-linear-gradient(top, rgba(255, 255, 255, 0.3), #efefe3);background-image:-o-linear-gradient(top, rgba(255, 255, 255, 0.3), #efefe3);background-image:linear-gradient(to bottom, rgba(255, 255, 255, 0.3), #efefe3);background-repeat:repeat-x;border-radius:4px 4px 4px 4px;-moz-border-radius:4px 4px 4px 4px;-webkit-border-radius:4px 4px 4px 4px;}
+#lien img{float:right;}
+.adminTools{float:right;margin-left:1em;}
+body h3{margin:0;}
+.description{color:#555;}
+#curlme{vertical-align:center;}
+@-moz-document url-prefix(){#curlme{padding:6px 10px;}}ul.nav{padding-top:10px;}
+#add{margin-left:30px;margin-top:20px;float:left;clear:both;}
+#next{float:right;}
+div.navImg{margin:0;}
+@media (min-width:1200px){}@media (min-width:768px) and (max-width:979px){#add{font-size:13px;}}@media (max-width:767px){body #lien img{width:100px;float:right;} .mainTitle{display:inline;} body .navbar h1 .brand{margin-top:6px;} #add{margin-left:0;} #footer a{font-size:14px;padding-left:10px;}}@media (max-width:480px){body p.description{width:100%;} body #lien img{float:none;margin-bottom:10px;} #lien h3{width:100%;} #footer a{font-size:10px;} .navbar .nav.pull-right{float:left;} #curlme{padding:6.5px 4px;font-size:12px;} body #message{width:50px;}}

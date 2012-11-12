@@ -1,29 +1,33 @@
 $(function(){
+	/* Bouton revenir en haut de la page */
+		$('body').prepend('<a href="#top" class="top_link" title="Back to top"><img src="http://www.es-designer.be/wp-content/themes/es/images/backToTop.png" alt="Back to top" /></a>');  
+		$(window).scroll(function(){  
+			posScroll = $(document).scrollTop();  
+			if(posScroll >=550)  
+				$('.top_link').fadeIn(600);  
+			else  
+				$('.top_link').fadeOut(600);  
+		});
 
-	//$("#message").focus();
 	$("#message").val('http://');
-	//$('#curl').fadeIn('slow');
-	
-//  $("#check").on("click", function() {
-		
-		// var curlText = $('.curl_titre').text(); //cible le champ input avec "this" et on va rechercher sa valeur avec val(); 
-			//(champInput.match('/^(((https?|ftp)://(w{3}\.)?)(?<!www)(\w+-?)*\.([a-z]{2,4}))$/i'))
-		
-		
-		// $("#curl").fadeIn('slow');
-	
-	// }); 
 	
 	var $figs = $('figure');
 	
-	$('<button id="previous"><i class="icon-chevron-left"></i></button>').appendTo('.img').on('click', imagePrecedente);
-	$('<button id="next"><i class="icon-chevron-right"></i></button>').appendTo('.img').on('click', imageSuivante);
-	
-			
+	$('<button id="previous"><i class="icon-chevron-left"></i></button>').appendTo('.navImg').on('click', imagePrecedente);
+	$('<button id="next"><i class="icon-chevron-right"></i></button>').appendTo('.navImg').on('click', imageSuivante);
+
 	$figs.not(':first').hide();
+	$('.curlImg').hide();
+	
+	$figs.children('input').first().attr('checked', 'checked');
 
 	function imageSuivante(e) {
 		e.preventDefault();
+		
+		$('input[checked=checked]').parent().next().children('input').attr('checked', 'checked');
+		$('input[checked=checked]').removeAttr('checked');
+
+
 		var $nextImage = $figs.filter(':visible').next('figure');
 		
 		if($nextImage.size() == 0)
@@ -31,8 +35,10 @@ $(function(){
 			$nextImage = $figs.first();
 			
 			$figs.filter(':visible').fadeOut('fast', function() {
-				$nextImage.fadeIn('fast');
+				$nextImage.fadeIn('fast');	
 			});
+			
+			$nextImage.children('input').first().attr('checked', 'checked');
 	};
 	
 	function imagePrecedente(e) {
@@ -44,8 +50,10 @@ $(function(){
 			$previousImage = $figs.last();
 			
 			$figs.filter(':visible').fadeOut('fast', function() {
-				$previousImage.fadeIn('fast');
+				$previousImage.fadeIn('fast');		
 			});
+			
+			$previousImage.children('input').first().attr('checked', 'checked');
 	};
 	
 	$(".delete").on('click', function(event){ 
@@ -54,8 +62,7 @@ $(function(){
 		$.ajax({
 				url:href,
 				success:function(data) {
-					//alert(data);
-					$this.parent().text(data).addClass('text-success').fadeOut(5000);
+					$this.parent().parent().text(data).addClass('text-success').fadeOut(5000);
 				}
 			});
 		event.preventDefault();

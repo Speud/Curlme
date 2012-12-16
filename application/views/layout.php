@@ -15,9 +15,9 @@
 </head>
 <body>
 	<div id="wrap">			
-	<header id="header" class="navbar navbar-inverse navbar-inner">
+	<header id="header" class="navbar navbar-inverse navbar-inner navbar-fixed-top">
         <div class="container">
-          <h1 class="mainTitle span3"><a href="<?php echo site_url(); ?>" class="brand">Curl me&nbsp;!</a></h1>
+          <h1 class="mainTitle"><a href="<?php echo site_url(); ?>" class="brand">Curl me&nbsp;!</a></h1>
 
             <ul class="nav pull-right">
 		          	 <?php if ($connected === TRUE) { ?>

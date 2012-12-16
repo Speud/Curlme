@@ -62,7 +62,7 @@ $(function(){
 		$.ajax({
 				url:href,
 				success:function(data) {
-					$this.parent().parent().text(data).addClass('text-success').fadeOut(5000);
+					$this.parent().parent().text(data).addClass('text-success deleteLink').fadeOut(5000);
 				}
 			});
 		event.preventDefault();

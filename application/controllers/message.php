@@ -93,25 +93,25 @@ class Message extends CI_Controller {
 					$this->load->view('layout', $dataLayout);
 				} else {
 
-				$dataLayout['curl_site'] = $url;
-				
-				/* récupération du titre du site */
-				if(preg_match('#<title>(.*?)<\/title>#i', $curlData, $curlTitle)) {
-					$dataLayout['curl_titre'] = $curlTitle[1];
-				} 
-				/* récupération de la description du site */
-				if(preg_match('#name="description" content="(.*?)"#i', $curlData, $curlDescription)) {
-					$dataLayout['curl_description'] = $curlDescription[1];
-				}
-				/* récupération des images du site  */
-				if(preg_match_all('#<img.* src="(.*?)"#i', $curlData, $curlImages)) {
-					$dataLayout['img'] = $curlImages;
-				}
+					$dataLayout['curl_site'] = $url;
+					
+					/* récupération du titre du site */
+					if(preg_match('#<title>(.*?)<\/title>#i', $curlData, $curlTitle)) {
+						$dataLayout['curl_titre'] = html_entity_decode($curlTitle[1]);
+					} 
+					/* récupération de la description du site */
+					if(preg_match('#name="description" content="(.*?)"#i', $curlData, $curlDescription)) {
+						$dataLayout['curl_description'] = $curlDescription[1];
+					}
+					/* récupération des images du site  */
+					if(preg_match_all('#<img.* src="(.*?)"#i', $curlData, $curlImages)) {
+						$dataLayout['img'] = $curlImages;
+					}
 				
 				$this->load->model('M_Member');
 				$dataLayout['connected'] = $this->M_Member->isLoggedIn(); 
 				$dataLayout['usernameSession'] = $this->session->userdata('username');
-				 $dataLayout['id_user'] = $this->session->userdata('id'); 
+				$dataLayout['id_user'] = $this->session->userdata('id'); 
 
 				$dataLayout['titre'] = 'CURL ME ! - Emmanuel Samu';
 			
@@ -137,7 +137,7 @@ class Message extends CI_Controller {
 				$test = file_get_contents($this->input->post('img'));
 				$typeImage = getimagesize($this->input->post('img'));
 				$type = explode("/", $typeImage['mime']);
-
+				
 				// genere une clé aléatoire
 				function random_str()
 				{

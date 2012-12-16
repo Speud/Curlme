@@ -4,7 +4,7 @@
 	<section class="well">
 		 <?php
 			//form igniter
-			echo form_open('message/curler', array('methodes' => 'post'));
+			echo form_open('message/curler', array('methodes' => 'post', 'class' => 'formCurl'));
 		?>
 			<div class="input-prepend input-append">
 				<span class="add-on"><i class="icon-globe"></i></span>
@@ -12,8 +12,8 @@
 				<?php $MsgInput = array(
 					'name' => 'message',
 					'id' => 'message appendedInputButton',
-					'class' => 'span6',
-					'placeholder' => 'Type your website'
+					'class' => 'span8',
+					'placeholder' => 'Enter your website'
 				);
 				echo form_input($MsgInput); 
 
@@ -29,7 +29,7 @@
 <!-- fin de l'URL -->
 	
 <?php if(isset($error)) { ?>
-	<div class="alert alert-error">
+	<div class="alert alert-error blockAlert">
 		<h4>Error!</h4>
 		<p><?php echo $error; ?></p>
 		<p><a href="<?php echo site_url(); ?>" title="Go to home page">Back to home</a></p>
@@ -58,7 +58,7 @@
 				'name' => 'nom',
 				'value' => isset($curl_titre) ? html_entity_decode($curl_titre) : '',
 				'class' => 'span9 curl_titre',
-				'placeholder' => "Title not found, type one by yourself"
+				'placeholder' => "Title not found, enter one by yourself"
 			);
 			echo form_input($nomInput); 
 
@@ -66,7 +66,7 @@
 				'name' => 'desc',
 				'value' => isset($curl_description) ? html_entity_decode($curl_description) : '',
 				'class' => 'span9 curl_description',
-				'placeholder' => "Description not found, type one by yourself"
+				'placeholder' => "Description not found, enter one by yourself"
 			);
 			echo form_textarea($descInput); 
 			
@@ -75,19 +75,17 @@
 			<div class="row">
 				<?php 
 					foreach ($img[1] as $image) : 
+						$scheme = parse_url($image); 
+						
+						if(empty($scheme['host']))
+							$image = $curl_site . '/' . $image;	
+
 					$imgInput = array(
 						'name' => 'img',
 						'value' => isset($image) ? $image : '',
 						'type' => isset($image) ? 'radio' : 'hidden',
 						'class' => 'span2 curlImg'
 					); ?>
-					
-					<?php 
-						$scheme = parse_url($image); 
-
-						if (empty($scheme['scheme']))
-				            $image = 'http://' . $image;
-					?>
 
 						<figure class="span2">
 							<img src="<?php echo $image; ?>" class="img-rounded image" alt="<?php if(isset($curl_titre)) : echo $curl_titre; endif; ?>" />
@@ -125,7 +123,7 @@
 	<section class="container">
 		<h1 class="textIndent">Liste des liens</h1>
 		<?php foreach ($message as $msg) : ?>
-			<article id="lien" class="row">	
+			<article class="lien row">	
 					<?php if(isset($msg['titre'])) : ?>
 						<h3 class="span8"><?php echo $msg['titre'];?></h3>
 						 <?php if ($connected === TRUE) { ?>
@@ -150,7 +148,7 @@
 						$imgThumbExplode = explode('.', $msg['image']);
 						$imgThumb = $imgThumbExplode[0] . '_thumb' . '.' . $imgThumbExplode[1];
 					?>
-						<img src="web/upload/<?php echo $imgThumb; ?>" alt="<?php echo $msg['titre']; ?>" class="span3 offset1 img-rounded imgThumb" />
+						<img src="<?php echo site_url(); ?>web/upload/<?php echo $imgThumb; ?>" alt="<?php echo $msg['titre']; ?>" class="span3 offset1 img-rounded imgThumb" />
 					<?php endif; ?>
 
 					<?php if(isset($msg['description'])) : ?>

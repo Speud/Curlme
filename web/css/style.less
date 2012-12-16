@@ -22,11 +22,11 @@ body .navbar h1 .brand {
 	font-size: 30px;
 	line-height: 15px;
 	font-weight: 900;
-	color: #000;
-   text-shadow: 1px 1px 1px rgba(39, 150, 28, 0.8), 0 0 20px rgba(255, 255, 255, 0.125);
+	color: #116909;
+   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8), 0 0 20px rgba(255, 255, 255, 0.125);
     transition: all 0.2s linear 0s;
     -moz-transition: all 0.2s linear 0s;
-         -webkit-transition: all 0.2s linear 0s;
+   -webkit-transition: all 0.2s linear 0s;
 }
 
 body .navbar .brand:hover {
@@ -42,7 +42,7 @@ body .navbar .brand:hover {
             margin-top: -56px; /* negative value of footer height */
             height: 40px;
             clear:both;
-            padding: 5px 0;
+            padding: 10px 0;
         }
        #footer a {
        		text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 30px rgba(255, 255, 255, 0.125);
@@ -70,6 +70,20 @@ body .navbar .brand:hover {
             height: 40px;
         }
 
+
+  h1.mainTitle {
+    display: inline-block;
+
+  }
+
+#content {
+  padding-top: 70px;
+}
+
+.blockAlert {
+  display: inline-block;
+}
+
 .textIndent {
 	display: none;
 }
@@ -78,7 +92,7 @@ body .navbar .brand:hover {
 	height: auto;
 	width: 100px;
 }
-#lien {
+.lien {
   margin-bottom: 2em;
   padding-bottom: 2em;
   border-bottom: 1px solid #ccc;
@@ -94,8 +108,11 @@ body .navbar .brand:hover {
   -webkit-border-radius: 4px 4px 4px 4px;
 }
 
-#lien img {
+.lien img {
 	float: right;
+}
+.deleteLink {
+  padding: 30px;
 }
 .adminTools {
   float: right;
@@ -108,13 +125,17 @@ body h3 {
 	color: #555;
 }
 
+.formCurl {
+  margin: 10px 0;
+}
+
 #curlme {
   vertical-align: center;
 }
 
 @-moz-document url-prefix() {
   #curlme {
-    padding: 6px 10px;
+    padding: 6px 7px;
   }
 }
 
@@ -144,6 +165,9 @@ div.navImg {
   #add {
     font-size: 13px;
   }
+  #content {
+    padding-top : 0;
+  }
 }
 
 /* Landscape phone to portrait tablet */
@@ -153,9 +177,6 @@ div.navImg {
     float: right;
 	}
 
-  .mainTitle {
-    display: inline;
-  }
   body .navbar h1 .brand {
     margin-top: 6px;
   }

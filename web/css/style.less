@@ -21,9 +21,9 @@ body a.top_link {
 body .navbar h1 .brand {
 	font-size: 30px;
 	line-height: 15px;
-	font-weight: 900;
+	font-weight: 700;
 	color: #116909;
-   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8), 0 0 20px rgba(255, 255, 255, 0.125);
+   text-shadow: -1px -1px 0px rgba(0, 0, 0, 0.8), 0 0 20px rgba(255, 255, 255, 0.125);
     transition: all 0.2s linear 0s;
     -moz-transition: all 0.2s linear 0s;
    -webkit-transition: all 0.2s linear 0s;
@@ -39,7 +39,7 @@ body .navbar .brand:hover {
            background-repeat: repeat;
             border-top: 1px solid #000;
             position: relative;
-            margin-top: -56px; /* negative value of footer height */
+            margin-top: -40px; /* negative value of footer height */
             height: 40px;
             clear:both;
             padding: 10px 0;
@@ -52,11 +52,11 @@ body .navbar .brand:hover {
        		font-size: 16px;
     		line-height: 40px;
     		font-weight: 300;
-    		color: #444;
+    		color: #888;
     		text-align: center;
        }
        #footer a:hover {
-       		color: #999;
+       		color: #ccc;
     		text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1), 0 0 30px rgba(0, 0, 0, 0.4);
     		text-decoration: none;
        }
@@ -72,8 +72,8 @@ body .navbar .brand:hover {
 
 
   h1.mainTitle {
-    display: inline-block;
-
+    float: left;
+    padding-right: 1em;
   }
 
 #content {
@@ -88,9 +88,20 @@ body .navbar .brand:hover {
 	display: none;
 }
 
+figure.span2 {
+  width: 150px;
+  height: auto;
+}
+  .image {
+    width: 150px;
+    height: auto;
+  }
+
 .imgThumb {
 	height: auto;
-	width: 100px;
+	width: 140px;
+  padding: 10px;
+  float: right;
 }
 .lien {
   margin-bottom: 2em;
@@ -107,19 +118,16 @@ body .navbar .brand:hover {
   -moz-border-radius: 4px 4px 4px 4px;
   -webkit-border-radius: 4px 4px 4px 4px;
 }
-
-.lien img {
-	float: right;
-}
 .deleteLink {
   padding: 30px;
 }
 .adminTools {
   float: right;
+  padding: 10px 10px 10px 5px;
   margin-left: 1em;
 }
-body h3 {
-  margin: 0;
+h3.siteTitle {
+  line-height: 30px;
 }
 .description {
 	color: #555;
@@ -143,10 +151,11 @@ ul.nav {
   padding-top: 10px;
 }
 #add {
-	margin-left: 30px;
+	margin-left: 20px;
 	margin-top: 20px;
 	float: left;
 	clear: both;
+  width: 150px;
 }
 
 #next {
@@ -155,41 +164,94 @@ ul.nav {
 
 div.navImg {
 	margin: 0;
+  width: 150px;
 }
 
 /* Large desktop */
-@media (min-width: 1200px) {  }
+@media (min-width: 1200px) {  
+  #add {
+    margin-left: 30px;
+  }
+}
 
+
+@media (max-width: 795px) {
+  #content {
+    padding-top: 0px;
+  }
+}
 /* Portrait tablet to landscape and desktop */
 @media (min-width: 768px) and (max-width: 979px) { 
+  #content {
+    padding-top: 0px;
+  }
   #add {
     font-size: 13px;
-  }
-  #content {
-    padding-top : 0;
+    margin-left: 20px;
+    width: 150px;
   }
 }
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 767px) {  
-  body #lien img {
-		width: 100px;
-    float: right;
-	}
+  #footer {
+      margin-right: -20px;
+      margin-left: -20px;
+  }
+    #footer p {
+      padding: 0px 20px;
+    }
+    #footer a {
+      padding: 10px;
+    }
 
-  body .navbar h1 .brand {
-    margin-top: 6px;
+  body .well input.span8 {
+    width: 70%;
   }
-  #add {
-    margin-left: 0;
-  }
-  #footer a {
-    font-size: 14px;
+
+  h3.siteTitle {
+    display: inline-block;
+    width: 80%;
+    margin-bottom: 0px;
     padding-left: 10px;
   }
+      .admin {
+        display: inline;
+      }
+      .description, .siteUrl {
+        width: 70%;
+        padding: 5px 10px;
+      }
+      .imgThumb {
+        padding-top: 0px;
+        width: 140px;
+        height: auto;
+      }
 
+  .navImg {
+    float: left;
+    width: 150px;
+  }
+    #add {
+      margin-left: 0;
+      width: 150px;
+    }
+
+  #signForm {
+    margin-top: 3em;
+  }
 }
 
+@media (max-width: 560px) { 
+  h3.siteTitle {
+    display: block;
+    margin-bottom: 0px;
+    width: 100%;
+  }
+  .description {
+    width: 60%;
+  }
+}
 /* Landscape phones and down */
 @media (max-width: 480px) { 
   body p.description {
@@ -203,17 +265,59 @@ div.navImg {
     width: 100%;
   }
   #footer a {
-    font-size: 10px;
-  }
-
-  .navbar .nav.pull-right {
-    float: left;
-  }
-  #curlme {
-    padding: 6.5px 4px;
     font-size: 12px;
+    line-height: 18px;
   }
-  body #message {
-    width: 50px;
+  body .well input.span8 {
+    width: 60%;
   }
+  .navbar .nav.pull-right {
+    float: none;
+  }
+ }
+
+ @media (max-width: 370px) {
+    .imgThumb {
+      float: none;
+    }
+    .description {
+      padding-bottom: 0px;
+    }
+    .siteUrl {
+      width: 100%;
+      display: inline-block;
+    }
+    .adminTools {
+      display: inline-block;
+      padding: 5px 10px 5px 5px;
+    }
+    .well {
+      padding: 19px 10px;
+    }
+    input#curlme {
+      padding: 4px 3px;
+      font-size: 11px;
+    }
+    .navbar .nav > li:first-child > a {
+        padding-left: 5px;
+        margin-right: 1em;
+    }
+    .navbar .pull-right > li > .dropdown-menu, .navbar .nav > li > .dropdown-menu.pull-right {
+        left: -20px;
+    }
+
+    #add {
+      width: 100%;
+    }
+      div.navImg {
+        width: 100%;
+      }
+      figure.span2 {
+        width: 100%;
+        height: auto;
+      }
+      .image {
+        width: 100%;
+        height: auto;
+      }
  }

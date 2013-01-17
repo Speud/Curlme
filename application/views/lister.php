@@ -88,7 +88,7 @@
 					); ?>
 
 						<figure class="span2">
-							<img src="<?php echo $image; ?>" class="img-rounded image" alt="<?php if(isset($curl_titre)) : echo $curl_titre; endif; ?>" />
+							<img src="<?php echo $image; ?>" class="img-rounded image" width="75px" height="75px" alt="<?php if(isset($curl_titre)) : echo $curl_titre; endif; ?>" />
 							<?php echo form_radio($imgInput); ?>
 						</figure>
 						
@@ -100,7 +100,7 @@
 			<div class="row">
 		<?php	$submit = array(
 				'name' => 'ajouter',
-				'value' => 'Ajouter ce lien',
+				'value' => 'Ajouter',
 				'id' => 'add',
 				'class' => 'btn btn-inverse btn-large span2',
 				'type' => isset($curl_site) ? 'submit' : 'hidden'
@@ -125,9 +125,9 @@
 		<?php foreach ($message as $msg) : ?>
 			<article class="lien row">	
 					<?php if(isset($msg['titre'])) : ?>
-						<h3 class="span8"><?php echo $msg['titre'];?></h3>
+						<h3 class="span8 siteTitle"><?php echo $msg['titre'];?></h3>
 						 <?php if ($connected === TRUE) { ?>
-						<div class="offset3 span1">
+						<div class="offset2 span2 admin">
 							<a href="<?php echo site_url(); ?>message/supprimer/<?php echo $msg['id']; ?>" data-dismiss="alert" title="delete link" class="delete adminTools">
 								<i class="icon-remove"></i>
 							</a>
@@ -139,7 +139,7 @@
 					<?php endif; ?>
 
 					<!-- lien du site -->
-					<p class="span8">
+					<p class="span8 siteUrl">
 						<a href="<?php echo $msg['site']; ?>" title="<?php if(isset($msg['titre'])) : echo $msg['titre']; endif; ?>"><?php echo $msg['site'];?>
 						</a>
 					</p>
@@ -148,7 +148,7 @@
 						$imgThumbExplode = explode('.', $msg['image']);
 						$imgThumb = $imgThumbExplode[0] . '_thumb' . '.' . $imgThumbExplode[1];
 					?>
-						<img src="<?php echo site_url(); ?>web/upload/<?php echo $imgThumb; ?>" alt="<?php echo $msg['titre']; ?>" class="span3 offset1 img-rounded imgThumb" />
+						<img src="<?php echo site_url(); ?>web/upload/<?php echo $imgThumb; ?>" alt="<?php echo $msg['titre']; ?>" class="span3 offset1 img-rounded imgThumb" width="75px" height="75px" />
 					<?php endif; ?>
 
 					<?php if(isset($msg['description'])) : ?>

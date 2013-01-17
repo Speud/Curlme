@@ -45,7 +45,7 @@
         ?>
     </section>
 
-    <section class="span5 offset2">
+    <section class="span5 offset2" id="signForm">
         <h2>Create a new account</h2>
         <?php  if(isset($successful)) : ?> 
         <section class="alert alert-success">

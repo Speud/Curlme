@@ -157,7 +157,7 @@ class Message extends CI_Controller {
 					$config['source_image'] = 'web/upload/' . $nomImage . '.' . $type[1];
 					$config['create_thumb'] = TRUE;
 					$config['maintain_ratio'] = TRUE;
-					$config['width'] = 100;
+					$config['width'] = 150;
 					$config['height'] = 75;
 
 					$this->load->library('image_lib', $config);

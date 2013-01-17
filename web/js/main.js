@@ -1,6 +1,6 @@
 $(function(){
 	/* Bouton revenir en haut de la page */
-		$('body').prepend('<a href="#top" class="top_link" title="Back to top"><img src="http://www.es-designer.be/wp-content/themes/es/images/backToTop.png" alt="Back to top" /></a>');  
+		$('body').prepend('<a href="#top" class="top_link" title="Back to top"><img src="http://www.es-designer.be/wp-content/themes/es/images/backToTop.png" alt="Back to top" width="30px" height="30px" /></a>');  
 		$(window).scroll(function(){  
 			posScroll = $(document).scrollTop();  
 			if(posScroll >=550)  

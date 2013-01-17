@@ -4,11 +4,11 @@
 	<meta charset="UTF-8">
 	<meta name="description" content="'Curl me' is a web application made by Emmanuel Samu" >
 	<title><?php echo $titre; ?></title>
-	<link href='http://fonts.googleapis.com/css?family=Raleway:400,900,700' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" type="text/css" media="all" href="<?php echo site_url() . CSS_DIR;?>bootstrap.min.css" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link href="<?php echo site_url() . CSS_DIR;?>bootstrap-responsive.min.css" rel="stylesheet">
-	 <link rel="stylesheet" type="text/css" media="all" href="<?php echo site_url() . CSS_DIR;?>style.css" /> 
+	 <link rel="stylesheet" type="text/css" media="all" href="<?php echo site_url() . CSS_DIR;?>style.css" />
+	 <link href="<?php echo site_url(); ?>web/img/favicon.ico" rel="icon"> 
 	 <!--[if lt IE 9]>
 			<script src="<?php echo site_url(); ?>web/js/html5shiv.js"></script>
 		<![endif]-->
@@ -53,15 +53,14 @@
 	</div><!-- fin div wrap -->
 	<footer id="footer">
       		<div class="container">
- 				<p><a href="http://www.es-designer.be" title="es-designer">A web application created by Emmanuel Samu <img src="<?php echo site_url(); ?>web/img/logo.png" alt="es-designer" /></a></p>     
+ 				<p><a href="http://www.es-designer.be" title="es-designer">A web application created by Emmanuel Samu <img src="<?php echo site_url(); ?>web/img/logo.png" alt="es-designer" width="25px" height="25px" /></a></p>     
  	  		</div>
     </footer>
 	
-		<script src="<?php echo site_url(); ?>web/js/vendor/modernizr-2.6.1.min.js"></script>	
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-		<script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/jquery-ui.min.js"></script>
-        <script>window.jQuery || document.write('<script src="<?php echo site_url(); ?>web/js/vendor/jquery-1.8.2.js"><\/script>')</script>
-		<script src="<?php echo site_url(); ?>web/js/main.js" type="text/javascript"></script>
+		<script src="<?php echo site_url(); ?>web/js/modernizr-2.6.1.min.js"></script>	
+        <script src="<?php echo site_url(); ?>web/js/jquery.min.js"></script>
+		<script src="<?php echo site_url(); ?>web/js/jquery-ui.min.js"></script>
+		<script src="<?php echo site_url(); ?>web/js/main.min.js" type="text/javascript"></script>
 		<script src="<?php echo site_url(); ?>web/js/bootstrap.min.js"></script>
 </body>
 </html>

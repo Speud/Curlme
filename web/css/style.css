@@ -1,14 +1,15 @@
 html,body{height:100%;}
 body a.top_link{position:fixed;right:20px;bottom:20px;display:none;opacity:0.7;z-index:2000;border-bottom:none;height:30px;width:30px;}
 #header{background-image:url('../img/office.png');background-repeat:repeat;}
-body .navbar h1 .brand{font-size:30px;line-height:15px;font-weight:700;color:#116909;text-shadow:-1px -1px 0px rgba(0, 0, 0, 0.8),0 0 20px rgba(255, 255, 255, 0.125);transition:all 0.2s linear 0s;-moz-transition:all 0.2s linear 0s;-webkit-transition:all 0.2s linear 0s;}
-body .navbar .brand:hover{color:#999;text-shadow:0 1px 1px rgba(0, 0, 0, 0.8),0 0 30px rgba(0, 0, 0, 0.4);}
+body .navbar h1 .brand{font-size:30px;line-height:15px;font-weight:700;color:#d1a04b;text-shadow:-1px -1px 0px rgba(0, 0, 0, 0.8),0 0 20px rgba(255, 255, 255, 0.125);transition:all 0.2s linear 0s;-moz-transition:all 0.2s linear 0s;-webkit-transition:all 0.2s linear 0s;-ms-transition:all 0.2s linear 0s;-o-transition:all 0.2s linear 0s;}
+body .navbar .brand:hover{color:#4f421d;text-shadow:0 1px 1px rgba(0, 0, 0, 0.8),0 0 30px rgba(0, 0, 0, 0.4);}
 #footer{background-image:url('../img/office.png');background-repeat:repeat;border-top:1px solid #000;position:relative;margin-top:-40px;height:40px;clear:both;padding:10px 0;}
-#footer a{text-shadow:0 1px 0 rgba(255, 255, 255, 0.1),0 0 30px rgba(255, 255, 255, 0.125);transition:all 0.2s linear 0s;-moz-transition:all 0.2s linear 0s;-webkit-transition:all 0.2s linear 0s;font-size:16px;line-height:40px;font-weight:300;color:#888;text-align:center;}
-#footer a:hover{color:#ccc;text-shadow:0 1px 0 rgba(0, 0, 0, 0.1),0 0 30px rgba(0, 0, 0, 0.4);text-decoration:none;}
+#footer a{text-shadow:0 1px 0 rgba(255, 255, 255, 0.1),0 0 30px rgba(255, 255, 255, 0.125);transition:all 0.2s linear 0s;-moz-transition:all 0.2s linear 0s;-webkit-transition:all 0.2s linear 0s;-ms-transition:all 0.2s linear 0s;-o-transition:all 0.2s linear 0s;font-size:16px;line-height:40px;font-weight:300;color:#ccc;text-align:center;}
+#footer a:hover{color:#fff;text-shadow:0 1px 0 rgba(0, 0, 0, 0.1),0 0 30px rgba(0, 0, 0, 0.4);text-decoration:none;}
 #wrap{min-height:100%;height:auto !important;height:40%;margin:0 auto -40px;}
 #push{height:40px;}
 h1.mainTitle{float:left;padding-right:1em;}
+.titleLink:link,.titleLink:visited{color:#333;}
 #content{padding-top:70px;}
 .blockAlert{display:inline-block;}
 .textIndent{display:none;}
@@ -25,5 +26,6 @@ h3.siteTitle{line-height:30px;}
 @-moz-document url-prefix(){#curlme{padding:6px 7px;}}ul.nav{padding-top:10px;}
 #add{margin-left:20px;margin-top:20px;float:left;clear:both;width:150px;}
 #next{float:right;}
-div.navImg{margin:0;width:150px;}
+div.navImg{margin:0;width:150px;float:none;}
+label{margin-top:5px;}
 @media (min-width:1200px){#add{margin-left:30px;}}@media (max-width:795px){#content{padding-top:0px;}}@media (min-width:768px) and (max-width:979px){#content{padding-top:0px;} #add{font-size:13px;margin-left:20px;width:150px;}}@media (max-width:767px){#footer{margin-right:-20px;margin-left:-20px;} #footer p{padding:0px 20px;} #footer a{padding:10px;} body .well input.span8{width:70%;} h3.siteTitle{display:inline-block;width:80%;margin-bottom:0px;padding-left:10px;} .admin{display:inline;} .description,.siteUrl{width:70%;padding:5px 10px;} .imgThumb{padding-top:0px;width:140px;height:auto;} .navImg{float:left;width:150px;} #add{margin-left:0;width:150px;} #signForm{margin-top:3em;}}@media (max-width:560px){h3.siteTitle{display:block;margin-bottom:0px;width:100%;} .description{width:60%;}}@media (max-width:480px){body p.description{width:100%;} body #lien img{float:none;margin-bottom:10px;} #lien h3{width:100%;} #footer a{font-size:12px;line-height:18px;} body .well input.span8{width:60%;} .navbar .nav.pull-right{float:right;text-align:right;}}@media (max-width:400px){.navbar .nav.pull-right{float:none;text-align:left;} .navbar .nav>li:first-child>a{padding-left:5px;margin-right:1em;}}@media (max-width:370px){.imgThumb{float:none;} .description{padding-bottom:0px;} .siteUrl{width:100%;display:inline-block;} .adminTools{display:inline-block;padding:5px 10px 5px 5px;} .well{padding:19px 10px;} input#curlme{padding:4px 3px;font-size:11px;} #add{width:100%;} div.navImg{width:100%;} figure.span2{width:100%;height:auto;} .image{width:100%;height:auto;}}

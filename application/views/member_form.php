@@ -2,7 +2,7 @@
 
 <section class="row-fluid">
     <section class="span5">
-        <h2>Connect to your account</h2>
+        <h2>Login to your account</h2>
 
        <?php  if(isset($error)) : ?> 
         <section class="alert alert-error">
@@ -18,7 +18,8 @@
             echo form_label('Your name', 'nameLogin');
             $emailInput = array(
                 'name' => 'nameLogin',
-                'id' => 'nameLogin'
+                'id' => 'nameLogin',
+                'placeholder' => 'Enter your name here'
             );
             echo form_input($emailInput);
             
@@ -27,7 +28,8 @@
             $passwordInput = array(
                 'name' => 'mdpLogin',
                 'id' => 'mdpLogin',
-                'type' => 'password'
+                'type' => 'password',
+                'placeholder' => 'Enter your name here'
             );
             echo form_input($passwordInput);
             
@@ -70,7 +72,8 @@
             $nomInput = array(
                 'name' => 'nom',
                 'id' => 'nom',
-                'value' => set_value('nom')
+                'value' => set_value('nom'),
+                'placeholder' => 'Enter your name here'
             );
             echo form_input($nomInput);
             
@@ -78,7 +81,9 @@
             $emailInput = array(
                 'name' => 'email',
                 'id' => 'email',
-                'value' => set_value('email')
+                'type' => 'email',
+                'value' => set_value('email'),
+                'placeholder' => 'Enter your email here'
             );
             echo form_input($emailInput);
             
@@ -87,7 +92,8 @@
             $passwordInput = array(
                 'name' => 'mdp',
                 'id' => 'mdp',
-                'type' => 'password'
+                'type' => 'password',
+                'placeholder' => 'Enter your name here'
             );
             echo form_input($passwordInput);
 
@@ -95,7 +101,8 @@
             $passwordConfirmInput = array(
                 'name' => 'mdp_confirm',
                 'id' => 'mdp_confirm',
-                'type' => 'password'
+                'type' => 'password',
+                'placeholder' => 'Enter your name here'
             );
             echo form_input($passwordConfirmInput);
             

@@ -22,15 +22,17 @@ body .navbar h1 .brand {
 	font-size: 30px;
 	line-height: 15px;
 	font-weight: 700;
-	color: #116909;
+	color: #d1a04b;
    text-shadow: -1px -1px 0px rgba(0, 0, 0, 0.8), 0 0 20px rgba(255, 255, 255, 0.125);
     transition: all 0.2s linear 0s;
     -moz-transition: all 0.2s linear 0s;
    -webkit-transition: all 0.2s linear 0s;
+   -ms-transition: all 0.2s linear 0s;
+   -o-transition: all 0.2s linear 0s;
 }
 
 body .navbar .brand:hover {
-	color: #999;
+	color: #4f421d;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 0, 0, 0.4);
 }
 
@@ -49,14 +51,16 @@ body .navbar .brand:hover {
    			 transition: all 0.2s linear 0s;
          -moz-transition: all 0.2s linear 0s;
          -webkit-transition: all 0.2s linear 0s;
+         -ms-transition: all 0.2s linear 0s;
+         -o-transition: all 0.2s linear 0s;
        		font-size: 16px;
     		line-height: 40px;
     		font-weight: 300;
-    		color: #888;
+    		color: #ccc;
     		text-align: center;
        }
        #footer a:hover {
-       		color: #ccc;
+       		color: #fff;
     		text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1), 0 0 30px rgba(0, 0, 0, 0.4);
     		text-decoration: none;
        }
@@ -74,6 +78,10 @@ body .navbar .brand:hover {
   h1.mainTitle {
     float: left;
     padding-right: 1em;
+  }
+
+  .titleLink:link, .titleLink:visited {
+    color: #333;
   }
 
 #content {
@@ -165,6 +173,11 @@ ul.nav {
 div.navImg {
 	margin: 0;
   width: 150px;
+  float: none;
+}
+
+label {
+  margin-top: 5px;
 }
 
 /* Large desktop */

@@ -58,8 +58,7 @@
     </footer>
 	
 		<script src="<?php echo site_url(); ?>web/js/modernizr-2.6.1.min.js"></script>	
-        <script src="<?php echo site_url(); ?>web/js/jquery.min.js"></script>
-		<script src="<?php echo site_url(); ?>web/js/jquery-ui.min.js"></script>
+        <script src="<?php echo site_url(); ?>web/js/jquery.js"></script>
 		<script src="<?php echo site_url(); ?>web/js/main.min.js" type="text/javascript"></script>
 		<script src="<?php echo site_url(); ?>web/js/bootstrap.min.js"></script>
 </body>

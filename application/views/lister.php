@@ -71,7 +71,7 @@
 			echo form_textarea($descInput); 
 			
 			if(isset($img)): ?>
-
+			<div class="navImg row span2"></div>
 			<div class="row">
 				<?php 
 					foreach ($img[1] as $image) : 
@@ -93,8 +93,7 @@
 						</figure>
 						
 				<?php endforeach; ?> 
-			</div>
-			<div class="navImg row span2"></div>			
+			</div>			
 				<?php endif; ?>
 			
 			<div class="row">
@@ -125,8 +124,11 @@
 		<?php foreach ($message as $msg) : ?>
 			<article class="lien row">	
 					<?php if(isset($msg['titre'])) : ?>
-						<h3 class="span8 siteTitle"><?php echo $msg['titre'];?></h3>
-						 <?php if ($connected === TRUE) { ?>
+						<a href="<?php echo $msg['site']; ?>" target="_blank" class="titleLink" title="<?php if(isset($msg['site'])) : echo $msg['site']; endif; ?>">
+							<h3 class="span8 siteTitle"><?php echo $msg['titre'];?></h3>
+						</a>
+						 <?php if ($connected === TRUE && $msg['curl_user_id'] === $id_user) { ?>
+
 						<div class="offset2 span2 admin">
 							<a href="<?php echo site_url(); ?>message/supprimer/<?php echo $msg['id']; ?>" data-dismiss="alert" title="delete link" class="delete adminTools">
 								<i class="icon-remove"></i>
@@ -140,7 +142,7 @@
 
 					<!-- lien du site -->
 					<p class="span8 siteUrl">
-						<a href="<?php echo $msg['site']; ?>" title="<?php if(isset($msg['titre'])) : echo $msg['titre']; endif; ?>"><?php echo $msg['site'];?>
+						<a href="<?php echo $msg['site']; ?>" target="_blank" title="<?php if(isset($msg['titre'])) : echo $msg['titre']; endif; ?>"><?php echo $msg['site'];?>
 						</a>
 					</p>
 

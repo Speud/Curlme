@@ -131,7 +131,7 @@
 
 						<div class="offset2 span2 admin">
 							<a href="<?php echo site_url(); ?>message/supprimer/<?php echo $msg['id']; ?>" data-dismiss="alert" title="delete link" class="delete adminTools">
-								<i class="icon-remove"></i>
+								<i class="icon-cancel"></i>
 							</a>
 							<a href="<?php echo site_url(); ?>message/listerOne/<?php echo $msg['id']; ?>" data-dismiss="alert" title="modify link" class="adminTools">
 								<i class="icon-edit"></i>

@@ -2,11 +2,12 @@
     class M_Member extends CI_Model {
         
         public function verifier($data) {
-            $query = $this->db->get_where('curlme_membres', array('nom' => $data['nom'], 'mdp' => $data['mdp']));
-
+            $this->db->select('curlme_membres.*, curlme_membres.nom, curlme_membres.mdp, curlme_membres.email, curlme_membres.membre_id');
+            $this->db->where(array('nom' => $data['nom'], 'mdp' => $data['mdp']));
+            $this->db->or_where(array('email' => $data['nom'], 'mdp' => $data['mdp']));
+            $this->db->from('curlme_membres');
+            $query = $this->db->get();
             return $query->result_array();
-            //return $query->row_array(); 
-            //return $query->num_rows();
         }
 
         public function enregistrer(){

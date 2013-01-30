@@ -23,6 +23,7 @@
             $data['mdp'] = $this->encrypt->sha1($data['mdp']);
 
             $data['nom'] = $this->input->post('nameLogin');
+            $data['email'] = $this->input->post('nameLogin');
 
             if($this->M_Member->verifier($data)) {
                 $data['infoMembre'] = $this->M_Member->verifier($data);

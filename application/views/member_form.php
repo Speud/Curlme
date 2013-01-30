@@ -2,7 +2,7 @@
 
 <section class="row-fluid">
     <section class="span5">
-        <h2>Login to your account</h2>
+        <h2>Log in to your account</h2>
 
        <?php  if(isset($error)) : ?> 
         <section class="alert alert-error">
@@ -15,11 +15,11 @@
         <?php
             //form igniter
             echo form_open('member/login', array('methodes' => 'post'));
-            echo form_label('Your name', 'nameLogin');
+            echo form_label('Your name OR your email', 'nameLogin');
             $emailInput = array(
                 'name' => 'nameLogin',
                 'id' => 'nameLogin',
-                'placeholder' => 'Enter your name here'
+                'placeholder' => 'Enter your name or your email here'
             );
             echo form_input($emailInput);
             
@@ -38,7 +38,7 @@
             $checkInput = array(
                 'name' => 'check',
                 'id' => 'check',
-                'value' => 'Connect',
+                'value' => 'Log in !',
                 'class' => 'btn'
                 );
             echo form_submit($checkInput); 

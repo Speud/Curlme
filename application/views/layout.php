@@ -39,7 +39,7 @@
 						<li><a href="<?php echo site_url(); ?>member/logout" class="brand"><i class="icon-white icon-off"></i> Log out</a></li>
 					 <?php } else { ?>
 
-						<li><a href="<?php echo site_url(); ?>member" class="brand"><i class="icon-white icon-pencil"></i> Log in / Sign up</a></li>
+						<li><a href="<?php echo site_url(); ?>member" class="brand"><i class="icon-lock-open"></i> Log in / Sign up</a></li>
 					 <?php } ?> 
 				 </ul>
         </div>
